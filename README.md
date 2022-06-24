@@ -1,8 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Overview
+
+Dolla is a personal budget and expense tracker app built with Next.js, NextAuth, and MongoDB.
+
+The app features a functional and interactive dashboard that is powered by Chart.js. With the dashboard, users can visualize their financial habits and better manage their spendings. Additionally, users have the option to view their spending history through a transaction table that tracks all of the users' expenses. This table contains both search and sorting functionalities, allowing users to find specific transactions quickly and efficiently.
+
+To begin, users would sign in with their Google account in the homepage:
+
+![homepage](https://github.com/jasonlin111/DollaFinance/blob/bd835adc55d4a55f997e0365f3b8a1e4916c135a/README_IMAGES/homepage.png)
+
+For first-time users, they would be prompted by a notification to set up their budget when they're on the `\overview` or `\transactions` pages:
+
+![set setting notification](https://github.com/jasonlin111/DollaFinance/blob/bd835adc55d4a55f997e0365f3b8a1e4916c135a/README_IMAGES/setSettingNotification.png)
+
+Setting up our budget in `\setting`:
+
+![set setting/budget](https://github.com/jasonlin111/DollaFinance/blob/bd835adc55d4a55f997e0365f3b8a1e4916c135a/README_IMAGES/setting.png)
+
+When users navigate to `\transactions` again, users would be greeted with a similar message that they need to create a transaction first:
+
+![create transaction nottification](https://github.com/jasonlin111/DollaFinance/blob/bd835adc55d4a55f997e0365f3b8a1e4916c135a/README_IMAGES/createTransactionNotification.png)
+
+Creating a transaction in `\create`:
+
+![create transaction](https://github.com/jasonlin111/DollaFinance/blob/bd835adc55d4a55f997e0365f3b8a1e4916c135a/README_IMAGES/create.png)
+
+This is what the dashboard and transactions table would look like, respectively, if the user inputted more transactions.
+
+![dashboard](https://github.com/jasonlin111/DollaFinance/blob/bd835adc55d4a55f997e0365f3b8a1e4916c135a/README_IMAGES/dashboard.png)
+![transactions table](https://github.com/jasonlin111/DollaFinance/blob/bd835adc55d4a55f997e0365f3b8a1e4916c135a/README_IMAGES/transactionTable.png)
+
+Users can choose to edit a transaction and the change would be immediate in both the dashboard and the table.
+
+![editing transaction](https://github.com/jasonlin111/DollaFinance/blob/bd835adc55d4a55f997e0365f3b8a1e4916c135a/README_IMAGES/editTransaction.png)
+
+Likewise, users can also edit their budget in `Setting` and the dashboard and table would reflect the change.
 
 ## Getting Started
 
-First, run the development server:
+### 1. Install the necessary dependencies
+```bash
+npm install
+# or
+yarn install
+```
+
+### 2. Configure environment variables
+Rename the `.env.local.example` file and to `.env.local`.
+
+Copy over the connection string of your MongoDB server as well as your OAuth credentials (Client ID and Client Secret) from Google Developers Console.
+
+Lastly, for NEXTAUTH_SECRET, you can get a random string by trying `openssl rand -hex 32` in the terminal. This string is used for 
+cryptographic purposes.
+
+
+### 3. Run the development server
 
 ```bash
 npm run dev
@@ -10,25 +61,4 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Open [http://localhost:3000](http://localhost:3000) with your browser to get started.
