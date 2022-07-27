@@ -24,7 +24,7 @@ Creating a transaction in `\create`:
 
 ![create transaction](https://github.com/jasonlin111/DollaFinance/blob/bd835adc55d4a55f997e0365f3b8a1e4916c135a/README_IMAGES/create.png)
 
-This is what the dashboard and transactions table may look like, respectively, if the user inputted more transactions.
+This is what the dashboard and transactions table look like, respectively, if the user inputted more transactions.
 
 ![dashboard](https://github.com/jasonlin111/DollaFinance/blob/bd835adc55d4a55f997e0365f3b8a1e4916c135a/README_IMAGES/dashboard.png)
 ![transactions table](https://github.com/jasonlin111/DollaFinance/blob/bd835adc55d4a55f997e0365f3b8a1e4916c135a/README_IMAGES/transactionTable.png)
@@ -61,4 +61,4 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to get started.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
